@@ -36,13 +36,10 @@ function convert(latitude, longitude)
     	{
           var response = JSON.parse(xhr.responseText);
           var city = response["results"][0]["address_components"][3]["long_name"];
-          document.getElementById("body").style.backgroundImage = 'url("img/"' + city + '".jpg")';
-        
+          document.getElementById("body").style.backgroundImage = 'url("img/"' + city + '".jpg")';      
 
      
         } 
-
-
     }
 }
 
@@ -62,8 +59,7 @@ function displayError(error)
  {
  errorMessage = errorMessage + " " + error.message;
  }
- var div = document.getElementById("location");
- div.innerHTML = errorMessage;
+ console.log(errorMessage);
 }
 
 //
